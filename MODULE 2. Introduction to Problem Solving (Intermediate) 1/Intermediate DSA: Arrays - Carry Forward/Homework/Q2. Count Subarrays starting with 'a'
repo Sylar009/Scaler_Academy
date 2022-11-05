@@ -1,0 +1,10 @@
+Given a string A = "amazon", find the number of subarrays starting with the character 'a'.
+
+Choose the correct answer from below:
+4
+6
+10
+12
+
+Answer :
+10
