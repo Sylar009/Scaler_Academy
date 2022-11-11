@@ -29,13 +29,27 @@ Output 2:
 Answer : 
 
 vector<int> Solution::solve(vector<int> &A) {
-    int product = 1;
-    for (int a : A) product *= a;
-
     vector<int> result;
-    for (int i = 0; i < A.size(); i++) {
-        result.push_back((product/A[i]));
+
+    int product = 1;
+    vector<int> sf_pro(A.size(), 0);
+
+    for (int i = A.size()-1; i >= 0; i--) {
+        product *= A[i];
+        sf_pro[i] = product;
     }
+
+    product = 1;
+    result.push_back(sf_pro[1]);
+
+    product *= A[0];
+    for (int j = 1; j < A.size()-1; j++) {
+        result.push_back(product * sf_pro[j+1]);
+        product *= A[j];
+    }
+    result.push_back(product);
+
     
     return result;
 }
+
