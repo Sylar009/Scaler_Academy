@@ -1,0 +1,52 @@
+Problem Description
+Construct a binary number having A 1's followed by B 0's. Return the decimal value of that binary number.
+For eg -
+A = 3, B = 2
+Answer = (11100)2 . Return = 28
+
+
+Problem Constraints
+1 <= A + B <= 30
+
+
+Input Format
+The first argument is a single integer A.
+The second argument is a single integer B.
+
+
+Output Format
+Return a single integer that is the decimal value of the converted binary number.
+
+
+Example Input
+Input 1:
+A = 3
+B = 2
+Input 2:
+
+A = 2
+B = 3
+
+
+Example Output
+Output 1:
+28
+Output 2:
+
+24
+
+
+Example Explanation
+Explanation 1:
+The output 28 which is 11100 in binary with 3 one's followed by 2 zero's.
+Explanation 2:
+The output 24 which is 11000 in binary with 2 one's followed by 3 zero's.
+
+
+Answer ::
+
+int Solution::solve(int A, int B) {
+    return ((1<<(A)) -1 ) << B;
+}
+
+
