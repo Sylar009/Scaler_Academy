@@ -1,0 +1,71 @@
+Problem Constraints
+1 <= |A| <= 105
+
+1 <= A[i] <= 109
+
+
+
+Input Format
+The first argument of input contains an integer array, A.
+
+The second argument of input contains an integer, B.
+
+
+
+Output Format
+Return an integer representing the answer.
+
+
+
+Example Input
+Input 1:
+
+ A = [2, 4, 3, 1, 5]
+ B = 3 
+Input 2:
+
+ A = [1, 4, 2]
+ B = 3
+
+
+Example Output
+Output 1:
+
+ 2 
+Output 2:
+
+ -1 
+
+
+Example Explanation
+Explanation 1:
+
+ We need to remove 4 and 5 to make 3 the biggest element. 
+Explanation 2:
+
+ As 3 doesn't exist in the array, the answer is -1. 
+ 
+ 
+ 
+ Answer : 
+ 
+ int Solution::solve(vector<int> &A, int B) {
+    int ans = -1;
+    
+    bool is_b_present = false;
+    int min_ops = 0;
+    for (int i =0; i<A.size(); i++) {
+        if (A[i] == B) {
+            is_b_present = true;
+        }
+        else if (A[i] > B) {
+            A[i] = -1;
+            min_ops++;
+        }
+    }
+    
+    if(is_b_present) { ans = min_ops; }
+    
+    return ans;
+}
+
