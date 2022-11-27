@@ -1,0 +1,23 @@
+What is the time complexity of the following code snippet?
+
+
+vector v;
+
+int n;
+
+for (int i=0; i < n; i++) {
+  v.push_back(i);
+}
+
+sort(A.begin(), A.end());
+
+Choose the correct answer from below:
+O(n)
+O(nlogn)
+O(1)
+O(n^2)
+None of the above
+
+
+Answer : O(nlogn)
+
