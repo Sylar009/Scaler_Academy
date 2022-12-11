@@ -1,0 +1,19 @@
+What is the time complexity of the following code snippet?
+
+int function(int n){
+   if(n % 2 == 0){
+      return 0;
+   }
+   return function(n-1) + function(floor(n/2));
+}
+
+
+
+Choose the correct answer from below:
+O(n)
+O(logn)
+O(1)
+None of these
+O(n^2)
+
+Answer : O(logn)
