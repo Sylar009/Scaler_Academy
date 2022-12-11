@@ -1,0 +1,42 @@
+Problem Description
+
+
+Construct a class Circle that represents a Circle.
+
+
+The class should support the following functionalities:-
+perimeter() -> returns the perimeter of the circle
+area() -> returns the area of the circle
+
+
+Assume Π (pi) = 3.14 for calculations.
+You may define any properties in the class as you see appropriate.
+
+Answer :
+
+class Circle {
+	public :
+	    // Define properties here
+        int radius;
+        const float pi = 3.14; 
+		
+		
+		// Define constructor here
+		Circle (int rad) : radius(rad){}
+		
+		float perimeter(){
+			// Complete the function
+            return (2 * pi * this->radius);			
+		}
+		
+		float area(){
+			// Complete the function
+			return (pi * this->radius * this->radius);
+		}
+};
+
+/*
+    Circle a = new Circle(3)  // Radius = 3
+	a.perimeter() // 18.84
+    a.area() // 28.26
+*/
